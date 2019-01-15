@@ -23,15 +23,21 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.css|scss$/,
                 use: [
                     "style-loader",
                     {
                         loader: "css-loader",
                         options: {
-                            modules: true
+                            modules: process.env.NODE_ENV !== 'production',
                         }
-                    }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: process.env.NODE_ENV !== 'production',
+                        },
+                    },
                 ]
             },
             {
