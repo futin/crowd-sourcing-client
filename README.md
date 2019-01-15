@@ -2,8 +2,11 @@ Table of Contents
 =================
 
    * [Crowd Sourcing](#crowd-sourcing)
-      * [Technology stack](#technology-stack)
-      * [Install](#install)
+    * [Technology stack](#technology-stack)
+    * [Install](#install)
+    * [Code Style](#code-style)
+        * [File template](#file-template)
+        * [File structure](#file-structure)
 
 #  Crowd Sourcing Client
 
@@ -14,6 +17,7 @@ Table of Contents
     - ReactJS
     - Babel
     - Webpack
+    - SCSS
     - ReactRouter
 
 ## Install
@@ -41,3 +45,27 @@ $ yarn start
 ```
 
 This will build the project in dist/main.js.
+
+## Code Style
+
+> Some general notes on Code Style used for this project
+
+### File template
+
+Each component should be in the separate folder in src/components:
+
+```js
+src
+    components
+        componentFolder
+            component.js
+            component.scss
+```
+
+Component which are usualy reusable should go in src/common:
+
+```js
+src
+    components
+        commonFolder
+```
