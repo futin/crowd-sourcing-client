@@ -1,0 +1,82 @@
+@import '../variables.scss';
+
+
+.login {
+    width: 100%;
+
+    p {
+        text-align: center;
+        color: $validationColor;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    button {
+        width: 150px;
+        height: 40px;
+        background-color: $submitColor;
+        color:white;
+        border-radius: 5px;
+        font-weight: 600;
+        border:none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+        &:hover {
+            border: 1px solid white;
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    
+        &:active {
+            background-color: white;
+            color:$submitColor;
+        }
+    
+        &:disabled {
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+        }
+    }
+
+    .forgotPass {
+        width: 25px;
+        height: 25px;
+        margin: 20px 5px 20px 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+        border-radius: 5px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            border: 2px solid $submitColor;
+          }
+          &:active {
+            background-color: $submitColor;
+          }
+    }
+
+    > div > small {
+        text-align: left;
+    }
+
+    > div {
+        margin-top: 20px;
+
+       > a {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            color: initial;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
