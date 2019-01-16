@@ -1,0 +1,109 @@
+@import '../common//variables.scss';
+
+
+.mainContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row-reverse;
+    .rightHalf {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media (min-width: 1200px) {
+            background-color: white;
+            width: 50%;
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        > section > p {
+            text-align: center;
+            color: $smallColor;
+            margin-bottom: 25px;
+        }
+
+         > small {
+            display: inline-block;
+            color: $smallColor;
+            width: 85%;
+            text-align: center;
+
+              @media (min-width: 1200px) { 
+                margin-top: 10px;
+                width: 60%;
+              }
+        }
+
+        .validationMsg {
+            align-self: flex-start;
+            color: red;
+        }
+    }
+}
+
+//POPULATE BUTTON - FOR TESTING PURPOSES ONLY
+.populate {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section {
+    margin: 0;
+    width: 50%;
+    padding: 30px;
+    width: 350px;
+    height: 500px;
+
+    @media(min-width: 767px) {
+        width: 50%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    input{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        font-weight: 600;
+        color: $submitColor;
+        background: none;
+    }
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $submitColor;
+        opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $submitColor;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+    }
+
+    
+}
+
+
+

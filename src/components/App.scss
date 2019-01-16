@@ -1,13 +1,45 @@
-// Define a color variable
-$color-sassy: #cc4397;
-$color-blue: #0059ff;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-.app {
-  color: $color-blue;
-  font-size: 2rem;
-  text-align: center;
-  .sassyDiv {
-    font-size: 3rem;
-    color: $color-sassy;
+ html, body{
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background:url('./img/pcvBack.jpg');
+  background: linear-gradient(black, white);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    background-position-x: 0;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 76, 118, 0.25);; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
